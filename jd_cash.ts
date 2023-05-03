@@ -89,7 +89,7 @@ class Jd_Cash extends JDHelloWorld {
         for (let code of shareCode) {
           console.log(`账号${user.index + 1} ${user.UserName} 去助力 ${code.inviteCode}`)
           res = await this.api('cash_qr_code_assist', {"version": "1", "channel": "applet", "type": 2, "inviteCode": code.inviteCode, "shareDate": code.shareDate, "lng": "", "lat": ""})
-          if (res.data.bizCode === 0) {
+          if (res.data?.bizCode === 0) {
             console.log('助力成功')
           } else {
             this.o2s(res, '助力结果')
