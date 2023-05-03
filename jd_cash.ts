@@ -54,7 +54,7 @@ class Jd_Cash extends JDHelloWorld {
         inviteCode: res.data.result.inviteCode,
         shareDate: res.data.result.shareDate
       })
-      if (res.data.result.signedStatus === 4) {
+      if (res.data.result.signedStatus === 3) {
         console.log('签到')
         res = await this.api('cash_mob_sign', {"version": "1", "channel": "applet", "remind": 0})
         if (res.data.bizCode === 0) {
