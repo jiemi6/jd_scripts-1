@@ -95,7 +95,7 @@ class Jd_Cash2 extends JDHelloWorld {
           } else {
             console.log('其他结果', res.data.helpResult)
           }
-          await this.wait(3000)
+          await this.wait(10000)
         }
       } catch (e) {
         console.log(e)
