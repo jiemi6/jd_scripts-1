@@ -64,7 +64,7 @@ class Jd_Cash2 extends JDHelloWorld {
       for (let i = 0; i < lotteryTimes; i++) {
         data = await this.api('inviteFissionDrawPrize', {"linkId": "c6Bkpjp7dYcvQwO9-PR7-g"})
         data.data.prizeType === 4 ? console.log('抽到现金', data.data.prizeValue * 1) : console.log('抽到其他', data.data)
-        await this.wait(3000)
+        await this.wait(6000)
       }
     } catch (e) {
       console.log(e.message)
